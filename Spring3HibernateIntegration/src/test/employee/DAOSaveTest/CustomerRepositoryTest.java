@@ -17,14 +17,14 @@ import com.howtodoinjava.entity.Credentials;
 import com.howtodoinjava.entity.EmployeeEntity;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:**/employee-servlet.xml" })
+@ContextConfiguration(locations = { "classpath:employee-servlet.xml" })
 // @EnableTransactionManagement
 public class CustomerRepositoryTest {
 
 	private static final Logger LOGGER = Logger.getLogger(CustomerRepositoryTest.class.getName());
 
 	// @Autowired
-	// @Qualifier("customerRepository")
+	 //@Qualifier("employeeDAO")
 	private static EmployeeDAO employeeDAO;
 
 	private EmployeeEntity employeeEntity;
@@ -32,9 +32,9 @@ public class CustomerRepositoryTest {
 	@BeforeClass
 	public static void prepare() {
 		// BasicConfigurator.configure(new ConsoleAppender(new SimpleLayout()));
-		final ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath*:**/employee-servlet.xml");
-		// final ApplicationContext ctx = new
-		// ClassPathXmlApplicationContext("classpath:dispatcher-servlet.xml");
+		//final ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath*:**/employee-servlet.xml");
+		 final ApplicationContext ctx = new
+		 ClassPathXmlApplicationContext("classpath:employee-servlet.xml");
 		employeeDAO = ctx.getBean("employeeDAO", EmployeeDAO.class);
 	}
 

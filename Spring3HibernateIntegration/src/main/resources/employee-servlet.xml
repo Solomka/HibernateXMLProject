@@ -19,7 +19,9 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing 
 		infrastructure -->
-	<!-- <mvc:resources mapping="/resources/**" location="resources/" />  -->  
+		
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!COMMENTED FOR JUINT TEST PURPOSES ONLY!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+	 <!-- <mvc:resources mapping="/resources/**" location="resources/" />  -->
 
 	<!-- declare mvc to be annotation driven -->
 	<!-- Enables the Spring MVC @Controller programming model -->
