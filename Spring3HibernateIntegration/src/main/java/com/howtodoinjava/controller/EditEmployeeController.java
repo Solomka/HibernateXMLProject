@@ -1,5 +1,7 @@
 package com.howtodoinjava.controller;
 
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -33,7 +35,7 @@ public class EditEmployeeController {
 	}
 
 	@RequestMapping("/delete/{employeeId}")
-	public String deleteEmplyee(@PathVariable("employeeId") Integer employeeId) {
+	public String deleteEmplyee(@PathVariable("employeeId") UUID employeeId) {
 		employeeManager.deleteEmployee(employeeId);
 		return "redirect:/";
 	}

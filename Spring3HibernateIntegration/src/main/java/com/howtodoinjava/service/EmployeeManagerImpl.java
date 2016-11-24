@@ -1,6 +1,7 @@
 package com.howtodoinjava.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,19 +16,18 @@ public class EmployeeManagerImpl implements EmployeeManager {
 	@Autowired
 	private EmployeeDAO employeeDAO;
 
-	
-	@Transactional
+	//@Transactional
 	public void addEmployee(EmployeeEntity employee) {
 		employeeDAO.addEmployee(employee);
 	}
 
-	@Transactional
+	//@Transactional
 	public List<EmployeeEntity> getAllEmployees() {
 		return employeeDAO.getAllEmployees();
 	}
 
-	@Transactional
-	public void deleteEmployee(Integer employeeId) {
+	//@Transactional
+	public void deleteEmployee(UUID employeeId) {
 		employeeDAO.deleteEmployee(employeeId);
 	}
 

@@ -13,20 +13,20 @@
  
     <table>
     <tr>
-        <td><form:label path="firstname"><spring:message code="label.firstname"/></form:label></td>
-        <td><form:input path="firstname" /></td>
+        <td><form:label path="credentials.firstname"><spring:message code="label.firstname"/></form:label></td>
+        <td><form:input path="credentials.firstname" /></td>
     </tr>
     <tr>
-        <td><form:label path="lastname"><spring:message code="label.lastname"/></form:label></td>
-        <td><form:input path="lastname" /></td>
+        <td><form:label path="credentials.lastname"><spring:message code="label.lastname"/></form:label></td>
+        <td><form:input path="credentials.lastname" /></td>
     </tr>
     <tr>
-        <td><form:label path="email"><spring:message code="label.email"/></form:label></td>
-        <td><form:input path="email" /></td>
+        <td><form:label path="credentials.email"><spring:message code="label.email"/></form:label></td>
+        <td><form:input path="credentials.email" /></td>
     </tr>
     <tr>
-        <td><form:label path="telephone"><spring:message code="label.telephone"/></form:label></td>
-        <td><form:input path="telephone" /></td>
+        <td><form:label path="credentials.telephone"><spring:message code="label.telephone"/></form:label></td>
+        <td><form:input path="credentials.telephone" /></td>
     </tr>
     <tr>
         <td colspan="2">
@@ -48,9 +48,9 @@
 </tr>
 <c:forEach items="${employeeList}" var="emp">
     <tr>
-        <td>${emp.lastname}, ${emp.firstname} </td>
-        <td>${emp.email}</td>
-        <td>${emp.telephone}</td>
+        <td>${emp.credentials.lastname}, ${emp.credentials.firstname} </td>
+        <td>${emp.credentials.email}</td>
+        <td>${emp.credentials.telephone}</td>
         <td><a href="delete/${emp.id}">delete</a></td>
     </tr>
 </c:forEach>
