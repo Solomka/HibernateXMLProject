@@ -17,7 +17,7 @@ import com.howtodoinjava.entity.Credentials;
 import com.howtodoinjava.entity.EmployeeEntity;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:employee-servlet.xml" })
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/employee-servlet.xml" })
 // @EnableTransactionManagement
 public class CustomerRepositoryTest {
 
@@ -34,7 +34,7 @@ public class CustomerRepositoryTest {
 		// BasicConfigurator.configure(new ConsoleAppender(new SimpleLayout()));
 		//final ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath*:**/employee-servlet.xml");
 		 final ApplicationContext ctx = new
-		 ClassPathXmlApplicationContext("classpath:employee-servlet.xml");
+		 ClassPathXmlApplicationContext("file:src/main/webapp/WEB-INF/employee-servlet.xml");
 		employeeDAO = ctx.getBean("employeeDAO", EmployeeDAO.class);
 	}
 
