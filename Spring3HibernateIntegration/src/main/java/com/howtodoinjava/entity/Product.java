@@ -60,4 +60,15 @@ public class Product {
 	public void setProductItems(List<ProductItem> productItems) {
 		this.productItems = productItems;
 	}
+	
+	/**
+	 * add Product to ProductItem
+	 * @param child
+	 */
+	public void addToProductItem(ProductItem child) {
+        child.setProduct(this);
+        this.productItems.add(child);
+    }
+	
+	
 }

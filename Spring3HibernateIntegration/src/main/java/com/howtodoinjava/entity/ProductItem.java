@@ -60,4 +60,5 @@ public class ProductItem {
 	public int hashCode() {
 		return (getPk() != null ? getPk().hashCode() : 0);
 	}
+
 }
